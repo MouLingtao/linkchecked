@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="https://lib.sinaapp.com/js/jquery/1.10/jquery-1.10.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/MouLingtao/linkchecked/master/jquery.linkchecked.js"></script>
+</head>
+<body>
+    <div>
+        <div>
+            <label><input type="checkbox" linkchecked-name="dep_1" />department1</label>
+            <div style="padding-left:20px;">
+                <label><input type="checkbox"  linkchecked-name="dep_1_1"/>worker1</label>
+                <label><input type="checkbox"  linkchecked-name="dep_1_2"/>worker2</label>
+                <label><input type="checkbox"  linkchecked-name="dep_1_3"/>worker3</label><br/>
+                <label><input type="checkbox"  linkchecked-name="dep_1_4"/>worker4</label>
+                <label><input type="checkbox"  linkchecked-name="dep_1_5"/>worker5</label>
+                <label><input type="checkbox"  linkchecked-name="dep_1_6"/>worker6</label><br/>
+                <label><input type="checkbox"  linkchecked-name="dep_1_7"/>worker7</label>
+                <label><input type="checkbox"  linkchecked-name="dep_1_8"/>worker8</label>
+            </div>
+        </div>
+        <div>
+            <label><input type="checkbox" linkchecked-name="dep_2" />department2</label>
+            <div style="padding-left:20px;">
+                <label><input type="checkbox"  linkchecked-name="dep_2_1"/>worker1</label>
+                <label><input type="checkbox"  linkchecked-name="dep_2_2"/>worker2</label>
+                <label><input type="checkbox"  linkchecked-name="dep_2_3"/>worker3</label><br/>
+                <label><input type="checkbox"  linkchecked-name="dep_2_4"/>worker4</label>
+                <label><input type="checkbox"  linkchecked-name="dep_2_5"/>worker5</label>
+                <label><input type="checkbox"  linkchecked-name="dep_2_6"/>worker6</label><br/>
+                <label><input type="checkbox"  linkchecked-name="dep_2_7"/>worker7</label>
+                <label><input type="checkbox"  linkchecked-name="dep_2_8"/>worker8</label>
+            </div>
+        </div>
+        <div>
+            <label><input type="checkbox" linkchecked-name="dep_3" />department3</label>
+            <div style="padding-left:20px;">
+                <label><input type="checkbox"  linkchecked-name="dep_3_1"/>worker1</label>
+                <label><input type="checkbox"  linkchecked-name="dep_3_2"/>worker2</label>
+                <label><input type="checkbox"  linkchecked-name="dep_3_3"/>worker3</label><br/>
+                <label><input type="checkbox"  linkchecked-name="dep_3_4"/>worker4</label>
+                <label><input type="checkbox"  linkchecked-name="dep_3_5"/>worker5</label>
+                <label><input type="checkbox"  linkchecked-name="dep_3_6"/>worker6</label><br/>
+                <label><input type="checkbox"  linkchecked-name="dep_3_7"/>worker7</label>
+                <label><input type="checkbox"  linkchecked-name="dep_3_8"/>worker8</label>
+            </div>
+        </div>
+        <div>
+            <label><input type="checkbox" linkchecked-name="dep" />select all</label>
+        </div>
+    </div>
+    <div>
+        <h2>LinkChecked是什么?</h2>
+        <p>一款基于jQuery开发的checkbox插件。当改变checkbox父项的选中状态的时候，自动将子项全部选择或取消选择。并且当之类选择改变的时候，也会改变父类的选择状态。</p>
+        <h2>如何使用他？</h2>
+        <p>正如DEMO所示，每一个checkbox都有一个唯一的名称，该名称命名规则为“{根名称}_{一级名称}_{二级名称}_{三级名称}”</p>
+        <p>然后一个 $.linkchecked('{根名称}'); 就OK啦~</p>
+        <h2>插件文档</h2>
+        <p><code>$.linkchecked(prefix,nameKey,parentKey);</code></p>
+        <blockquote>
+          <p>prefix:名称前缀，也就是根名称。</p>
+          <p>nameKey:将该checkbox的那个属性作为他的名称。</p>
+          <p>parentKey:将该checkbox的那个属性作为他父级的名称。当该名称值为空的时候，自动根据名称获取其父级名称。反之使用该属性值作为父级的名称。(该功能暂时不可用)</p>
+        </blockquote>
+        <p>当然，两堆checkbox的前缀相同的时候。使用如下方式初始化即可。</p>
+        <p><code>$('selector').linkchecked(prefix,nameKey,parentKey);</code></p>
+        <p>或者</p>
+        <p><code>$.linkchecked(prefix,nameKey,parentKey,$('selector'));</code></p>
+    </div>
+</body>
+<script type="text/javascript">
+    $.linkchecked('dep');
+</script>
+</html>
