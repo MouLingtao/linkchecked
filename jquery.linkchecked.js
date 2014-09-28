@@ -28,7 +28,9 @@
  */
 (function ($) {
     $.fn.linkchecked = function (prefix, nameKey, parentKey) {
-        $.linkchecked(prefix, nameKey, parentKey, $(this));
+        var that = $(this);
+        $.linkchecked(prefix, nameKey, parentKey, that);
+        return that;
     }
     $.linkchecked = function (prefix, nameKey, parentKey, nodeDom) {
         nameKey = nameKey ? nameKey : 'linkchecked-name';
@@ -37,6 +39,7 @@
         var allCheckbox = nodeDom.find('input[' + nameKey + '^=' + prefix + ']:checkbox');
         allCheckbox.each(function () {
             var that = $(this);
+            if(that.attr(parentKey)) return;
             var name = that.attr(nameKey);
             var parent = name.substr(0, name.lastIndexOf('_'));
             $(this).attr(parentKey, parent);
